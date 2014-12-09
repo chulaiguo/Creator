@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Cheke;
+using D3000.FacadeServiceWrapper;
 
 namespace JetCode.SendEmail.Helper
 {
@@ -77,8 +78,11 @@ namespace JetCode.SendEmail.Helper
         {
             try
             {
-                HelperExcel excel = new HelperExcel();
-                DataSet dataSet = excel.LoadIntoDataSet(fileName, false);
+                //HelperExcel excel = new HelperExcel();
+                //DataSet dataSet = excel.LoadIntoDataSet(fileName, false);
+
+                byte[] data = File.ReadAllBytes(fileName);
+                DataSet dataSet = BizExcelWrapper.LoadIntoDataSet(data, false, new SecurityToken("", ""));
                 if (dataSet.Tables.Count == 0)
                     return null;
 

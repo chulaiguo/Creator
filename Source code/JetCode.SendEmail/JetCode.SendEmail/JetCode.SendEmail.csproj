@@ -54,6 +54,18 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cheke">
+      <HintPath>..\..\..\..\D3000\Bin\Cheke.dll</HintPath>
+    </Reference>
+    <Reference Include="Cheke.ClassFactory">
+      <HintPath>..\..\..\..\D3000\Bin\Cheke.ClassFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Cheke.Configuration">
+      <HintPath>..\..\..\..\D3000\Bin\Cheke.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="D3000.FacadeServiceWrapper">
+      <HintPath>..\..\..\..\D3000\Bin\D3000.FacadeServiceWrapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
