@@ -85,6 +85,7 @@
     <Compile Include="FormMisc\FormEmailSetting.Designer.cs">
       <DependentUpon>FormEmailSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperSpider.cs" />
     <Compile Include="Helper\HelperEmail.cs" />
     <Compile Include="Helper\HelperLoader.cs" />
     <Compile Include="FormBase.cs">
