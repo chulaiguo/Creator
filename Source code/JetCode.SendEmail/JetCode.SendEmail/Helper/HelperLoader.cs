@@ -120,31 +120,31 @@ namespace JetCode.SendEmail.Helper
             {
                 for (int i = 0; i < table.Columns.Count; i++)
                 {
-                    string sitecode = row[1].ToString();
-                    string embossed = row[2].ToString();
-                    string photo = row[10].ToString();
-                    if(string.IsNullOrEmpty(photo))
-                        continue;
+                    //string sitecode = row[1].ToString();
+                    //string embossed = row[2].ToString();
+                    //string photo = row[10].ToString();
+                    //if(string.IsNullOrEmpty(photo))
+                    //    continue;
 
-                    string key = string.Format("{0}_{1}", sitecode, embossed);
-                    if (!retList.ContainsKey(key))
-                    {
-                        retList.Add(key, photo);
-                    }
-                    //string emails = row[i].ToString();
-                    //emails = emails.Trim().Trim('\"');
-                    //string[] splits = emails.Split(';');
-                    //foreach (string item in splits)
+                    //string key = string.Format("{0}_{1}", sitecode, embossed);
+                    //if (!retList.ContainsKey(key))
                     //{
-                    //    string email = item.Trim().ToLower();
-                    //    if (retList.ContainsKey(email))
-                    //        continue;
-
-                    //    if (!HelperEmail.IsValidEmail(email))
-                    //        continue;
-
-                    //    retList.Add(email, email);
+                    //    retList.Add(key, photo);
                     //}
+                    string emails = row[i].ToString();
+                    emails = emails.Trim().Trim('\"');
+                    string[] splits = emails.Split(';');
+                    foreach (string item in splits)
+                    {
+                        string email = item.Trim().ToLower();
+                        if (retList.ContainsKey(email))
+                            continue;
+
+                        if (!HelperEmail.IsValidEmail(email))
+                            continue;
+
+                        retList.Add(email, email);
+                    }
                 }
             }
 
