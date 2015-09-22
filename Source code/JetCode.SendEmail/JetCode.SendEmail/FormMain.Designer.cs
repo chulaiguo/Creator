@@ -66,6 +66,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoadMultiEmail = new System.Windows.Forms.Button();
             this.tabContainer.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.grpLog.SuspendLayout();
@@ -212,6 +213,7 @@
             // 
             // pnlSendTo
             // 
+            this.pnlSendTo.Controls.Add(this.btnLoadMultiEmail);
             this.pnlSendTo.Controls.Add(this.btnRemoveEmail);
             this.pnlSendTo.Controls.Add(this.btnLoadEmail);
             this.pnlSendTo.Controls.Add(this.btnAddEmail);
@@ -223,9 +225,9 @@
             // 
             // btnRemoveEmail
             // 
-            this.btnRemoveEmail.Location = new System.Drawing.Point(456, 17);
+            this.btnRemoveEmail.Location = new System.Drawing.Point(593, 17);
             this.btnRemoveEmail.Name = "btnRemoveEmail";
-            this.btnRemoveEmail.Size = new System.Drawing.Size(190, 38);
+            this.btnRemoveEmail.Size = new System.Drawing.Size(152, 38);
             this.btnRemoveEmail.TabIndex = 6;
             this.btnRemoveEmail.Text = "Remove Email";
             this.btnRemoveEmail.UseVisualStyleBackColor = true;
@@ -233,9 +235,9 @@
             // 
             // btnLoadEmail
             // 
-            this.btnLoadEmail.Location = new System.Drawing.Point(35, 17);
+            this.btnLoadEmail.Location = new System.Drawing.Point(25, 17);
             this.btnLoadEmail.Name = "btnLoadEmail";
-            this.btnLoadEmail.Size = new System.Drawing.Size(190, 38);
+            this.btnLoadEmail.Size = new System.Drawing.Size(152, 38);
             this.btnLoadEmail.TabIndex = 4;
             this.btnLoadEmail.Text = "Load Excel ...";
             this.btnLoadEmail.UseVisualStyleBackColor = true;
@@ -243,9 +245,9 @@
             // 
             // btnAddEmail
             // 
-            this.btnAddEmail.Location = new System.Drawing.Point(246, 17);
+            this.btnAddEmail.Location = new System.Drawing.Point(435, 17);
             this.btnAddEmail.Name = "btnAddEmail";
-            this.btnAddEmail.Size = new System.Drawing.Size(190, 38);
+            this.btnAddEmail.Size = new System.Drawing.Size(152, 38);
             this.btnAddEmail.TabIndex = 5;
             this.btnAddEmail.Text = "Add Email";
             this.btnAddEmail.UseVisualStyleBackColor = true;
@@ -460,6 +462,16 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnLoadMultiEmail
+            // 
+            this.btnLoadMultiEmail.Location = new System.Drawing.Point(183, 17);
+            this.btnLoadMultiEmail.Name = "btnLoadMultiEmail";
+            this.btnLoadMultiEmail.Size = new System.Drawing.Size(152, 38);
+            this.btnLoadMultiEmail.TabIndex = 7;
+            this.btnLoadMultiEmail.Text = "Load Multi-Excel ...";
+            this.btnLoadMultiEmail.UseVisualStyleBackColor = true;
+            this.btnLoadMultiEmail.Click += new System.EventHandler(this.btnLoadMultiEmail_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,6 +544,7 @@
         private System.Windows.Forms.ImageList imgLarge;
         private UserCtrl.HtmlEditor txtBody;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLoadMultiEmail;
     }
 }
 

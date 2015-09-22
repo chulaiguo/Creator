@@ -76,10 +76,11 @@ namespace JetCode.SendEmail
             StringBuilder builder = new StringBuilder();
             foreach (KeyValuePair<string, string> pair in this._emailList)
             {
-                if(this._sentEmailList.ContainsKey(pair.Key))
+                if (this._sentEmailList.ContainsKey(pair.Key))
                     continue;
 
                 builder.AppendLine(string.Format("{0};", pair.Value));
+                //builder.AppendLine(string.Format("{0}|{1}", pair.Key, pair.Value));
             }
             string text = builder.ToString();
             if (text.Length > 0)
@@ -365,6 +366,24 @@ namespace JetCode.SendEmail
                 return;
 
             this.LoadEmailAddress(openFileDialog.FileName);
+        }
+
+        private void btnLoadMultiEmail_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dlg = new FolderBrowserDialog();
+            dlg.ShowNewFolderButton = false;
+            if (dlg.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                return;
+
+            DirectoryInfo directory = new DirectoryInfo(dlg.SelectedPath);
+            FileInfo[] list = directory.GetFiles();
+            foreach (FileInfo item in list)
+            {
+                if (item.Extension.ToLower() != ".xls" && item.Extension.ToLower() != ".csv")
+                    continue;
+
+                this.LoadEmailAddress(item.FullName);
+            }
         }
 
         private void btnAddEmail_Click(object sender, EventArgs e)

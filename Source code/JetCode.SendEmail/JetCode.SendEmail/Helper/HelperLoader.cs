@@ -120,10 +120,10 @@ namespace JetCode.SendEmail.Helper
             {
                 for (int i = 0; i < table.Columns.Count; i++)
                 {
-                    //string sitecode = row[1].ToString();
-                    //string embossed = row[2].ToString();
-                    //string photo = row[10].ToString();
-                    //if(string.IsNullOrEmpty(photo))
+                    //string sitecode = row[5].ToString();
+                    //string embossed = row[6].ToString();
+                    //string photo = row[15].ToString();
+                    //if (string.IsNullOrEmpty(photo))
                     //    continue;
 
                     //string key = string.Format("{0}_{1}", sitecode, embossed);
