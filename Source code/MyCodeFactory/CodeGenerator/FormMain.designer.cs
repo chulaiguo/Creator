@@ -108,6 +108,7 @@ namespace CodeGenerator
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.btnExtractInterface = new System.Windows.Forms.Button();
             this.btnGetViewBy = new System.Windows.Forms.Button();
+            this.btnBizService = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -795,6 +796,7 @@ namespace CodeGenerator
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.btnBizService);
             this.groupBox7.Controls.Add(this.btnfacadeService);
             this.groupBox7.Controls.Add(this.btnMyServiceWrapper);
             this.groupBox7.Controls.Add(this.btnBizServiceWrapper);
@@ -811,7 +813,7 @@ namespace CodeGenerator
             // 
             // btnfacadeService
             // 
-            this.btnfacadeService.Location = new System.Drawing.Point(10, 218);
+            this.btnfacadeService.Location = new System.Drawing.Point(10, 199);
             this.btnfacadeService.Name = "btnfacadeService";
             this.btnfacadeService.Size = new System.Drawing.Size(113, 23);
             this.btnfacadeService.TabIndex = 33;
@@ -821,7 +823,7 @@ namespace CodeGenerator
             // 
             // btnMyServiceWrapper
             // 
-            this.btnMyServiceWrapper.Location = new System.Drawing.Point(10, 188);
+            this.btnMyServiceWrapper.Location = new System.Drawing.Point(10, 169);
             this.btnMyServiceWrapper.Name = "btnMyServiceWrapper";
             this.btnMyServiceWrapper.Size = new System.Drawing.Size(113, 23);
             this.btnMyServiceWrapper.TabIndex = 32;
@@ -831,7 +833,7 @@ namespace CodeGenerator
             // 
             // btnBizServiceWrapper
             // 
-            this.btnBizServiceWrapper.Location = new System.Drawing.Point(10, 159);
+            this.btnBizServiceWrapper.Location = new System.Drawing.Point(10, 140);
             this.btnBizServiceWrapper.Name = "btnBizServiceWrapper";
             this.btnBizServiceWrapper.Size = new System.Drawing.Size(113, 23);
             this.btnBizServiceWrapper.TabIndex = 32;
@@ -841,7 +843,7 @@ namespace CodeGenerator
             // 
             // btnFacadeWrapper
             // 
-            this.btnFacadeWrapper.Location = new System.Drawing.Point(10, 130);
+            this.btnFacadeWrapper.Location = new System.Drawing.Point(10, 111);
             this.btnFacadeWrapper.Name = "btnFacadeWrapper";
             this.btnFacadeWrapper.Size = new System.Drawing.Size(113, 23);
             this.btnFacadeWrapper.TabIndex = 28;
@@ -942,6 +944,16 @@ namespace CodeGenerator
             this.btnGetViewBy.Text = "GetViewBy";
             this.btnGetViewBy.UseVisualStyleBackColor = true;
             this.btnGetViewBy.Click += new System.EventHandler(this.btnGetViewBy_Click);
+            // 
+            // btnBizService
+            // 
+            this.btnBizService.Location = new System.Drawing.Point(10, 236);
+            this.btnBizService.Name = "btnBizService";
+            this.btnBizService.Size = new System.Drawing.Size(113, 23);
+            this.btnBizService.TabIndex = 34;
+            this.btnBizService.Text = "BizService";
+            this.btnBizService.UseVisualStyleBackColor = true;
+            this.btnBizService.Click += new System.EventHandler(this.btnBizService_Click);
             // 
             // FormMain
             // 
@@ -1064,5 +1076,6 @@ namespace CodeGenerator
         private System.Windows.Forms.Button btnTestService;
         private System.Windows.Forms.Button btnViewObj;
         private System.Windows.Forms.Button btnViewMethod;
+        private System.Windows.Forms.Button btnBizService;
     }
 }

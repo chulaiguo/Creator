@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BizObjCode.cs" />
     <Compile Include="BizObjCollectionCode.cs" />
+    <Compile Include="BizServiceCode.cs" />
     <Compile Include="BizServiceWrapperCode.cs" />
     <Compile Include="BizServiceBuilderCode.cs" />
     <Compile Include="ViewMethodCode.cs" />

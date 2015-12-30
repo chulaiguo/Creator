@@ -50,7 +50,7 @@ namespace CodeGenerator
             Type[] types = this._assembly.GetTypes();
             foreach (Type item in types)
             {
-                if (!item.IsPublic)
+                if (!item.IsPublic || item.IsAbstract || !item.Name.StartsWith("Biz"))
                     continue;
 
                 this.WriteMethods(item, writer);
@@ -70,7 +70,7 @@ namespace CodeGenerator
                     writer.WriteLine("\t\tpublic {0} {1}({2})", info.ReturnType, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
 
-                    writer.WriteLine("\t\t\tnew {0}(base.OriginalToken).{1}({2});", type.Name, info.Name, this.GetParaNameList(info));
+                    writer.WriteLine("\t\t\tnew {0}(base.OriginalToken, this.Log).{1}({2});", type.Name, info.Name, this.GetParaNameList(info));
 
                     writer.WriteLine("\t\t}");
                 }
@@ -78,7 +78,7 @@ namespace CodeGenerator
                 {
                     writer.WriteLine("\t\tpublic {0} {1}({2})", info.ReturnType, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
-                    writer.WriteLine("\t\t\treturn new {0}(base.OriginalToken).{1}({2});", type.Name, info.Name, this.GetParaNameList(info));
+                    writer.WriteLine("\t\t\treturn new {0}(base.OriginalToken, this.Log).{1}({2});", type.Name, info.Name, this.GetParaNameList(info));
                     writer.WriteLine("\t\t}");
 
                 }

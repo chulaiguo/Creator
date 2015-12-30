@@ -45,7 +45,7 @@ namespace CodeGenerator
                     if(item.Name != dlg.SelectedType)
                         continue;
 
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}.cs", item.Name);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}.cs", item.Name);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -70,7 +70,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ColumnsBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ColumnsBuilder.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -95,7 +95,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\LookUpEditBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\LookUpEditBuilder.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -125,7 +125,7 @@ namespace CodeGenerator
                     if (!item.IsPublic || !item.Name.EndsWith("Data"))
                         continue;
 
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}Binding.cs", item.Name);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}Binding.cs", item.Name);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -156,7 +156,7 @@ namespace CodeGenerator
                     if (!item.IsPublic || !item.Name.EndsWith("Data"))
                         continue;
 
-                    string strPath = string.Format(@"F:\Tools\Creator\Grid{0}Decorator.cs", item.Name.Substring(0, item.Name.Length - 4));
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\Grid{0}Decorator.cs", item.Name.Substring(0, item.Name.Length - 4));
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -193,7 +193,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\{0}.cs", fileName);
+                string strPath = string.Format(@"E:\Temp\Documents\Create\{0}.cs", fileName);
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -225,7 +225,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormDetail{0}.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormDetail{0}.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -258,7 +258,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormDetail{0}.Designer.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormDetail{0}.Designer.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -291,7 +291,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormWork{0}List.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormWork{0}List.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -324,7 +324,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormWork{0}List.Designer.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormWork{0}List.Designer.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -357,7 +357,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormWork{0}.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormWork{0}.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -390,7 +390,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormWork{0}.Designer.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormWork{0}.Designer.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -424,7 +424,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormWork{0}Search.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormWork{0}Search.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -457,7 +457,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\FormWork{0}Search.Designer.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\FormWork{0}Search.Designer.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -487,7 +487,7 @@ namespace CodeGenerator
             {
                 string[] paths = this.openFileDialog1.FileName.Split('\\');
                 string name = paths[paths.Length - 1];
-                string strPath = string.Format(@"F:\Tools\Creator\{0}Builder.cs", name.Substring(0, name.Length - 4));
+                string strPath = string.Format(@"E:\Temp\Documents\Create\{0}Builder.cs", name.Substring(0, name.Length - 4));
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -513,7 +513,7 @@ namespace CodeGenerator
             {
                 string[] paths = this.openFileDialog1.FileName.Split('\\');
                 string name = paths[paths.Length - 1];
-                string strPath = string.Format(@"F:\Tools\Creator\{0}BuilderFixture.cs", name.Substring(0, name.Length - 4));
+                string strPath = string.Format(@"E:\Temp\Documents\Create\{0}BuilderFixture.cs", name.Substring(0, name.Length - 4));
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -537,7 +537,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\BuilderBase.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\BuilderBase.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -557,7 +557,7 @@ namespace CodeGenerator
         {
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\FixtureBase.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\FixtureBase.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -581,7 +581,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\App.config");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\App.config");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -600,7 +600,7 @@ namespace CodeGenerator
         {
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\Program.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\Program.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -623,7 +623,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ServiceBuilder.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -644,7 +644,7 @@ namespace CodeGenerator
         #region Service code
         private void btnServiceBase_Click(object sender, EventArgs e)
         {
-            string strPath = string.Format(@"F:\Tools\Creator\ServiceBase.cs");
+            string strPath = string.Format(@"E:\Temp\Documents\Create\ServiceBase.cs");
 
             FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
             fs.SetLength(0);
@@ -670,7 +670,7 @@ namespace CodeGenerator
                         continue;
 
                     string serviceName = item.Name.Substring(0, item.Name.Length - 11) + "Service";
-                    string strPath = string.Format(@"F:\Tools\Creator\IGen{0}.cs", serviceName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\IGen{0}.cs", serviceName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -695,7 +695,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\IGenServiceFactory.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\IGenServiceFactory.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -726,7 +726,7 @@ namespace CodeGenerator
                         continue;
 
                     string serviceName = item.Name.Substring(0, item.Name.Length - 11) + "Service";
-                    string strPath = string.Format(@"F:\Tools\Creator\Gen{0}.cs", serviceName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\Gen{0}.cs", serviceName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -751,7 +751,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\GenServiceFactory.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\GenServiceFactory.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -782,7 +782,7 @@ namespace CodeGenerator
                         continue;
 
                     string serviceName = item.Name.Substring(0, item.Name.Length - 11) + "Service";
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}.cs", serviceName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}.cs", serviceName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -814,7 +814,7 @@ namespace CodeGenerator
                         continue;
 
                     string serviceName = item.Name.Substring(0, item.Name.Length - 11) + "Service";
-                    string strPath = string.Format(@"F:\Tools\Creator\I{0}.cs", serviceName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\I{0}.cs", serviceName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -835,7 +835,7 @@ namespace CodeGenerator
         {
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ServiceFactory.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ServiceFactory.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -855,7 +855,7 @@ namespace CodeGenerator
         {
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\IServiceFactory.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\IServiceFactory.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -889,7 +889,7 @@ namespace CodeGenerator
                         continue;
 
                     string name = item.Name.Substring(0, item.Name.Length - "Base".Length);
-                    string strPath = string.Format(@"F:\Tools\Creator\I{0}.cs", name);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\I{0}.cs", name);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -914,7 +914,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\IDataServiceFactory.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\IDataServiceFactory.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -949,7 +949,7 @@ namespace CodeGenerator
                         continue;
 
                     string name = item.Name.Substring(0, item.Name.Length - "Base".Length);
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}.cs", name);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}.cs", name);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -974,7 +974,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DataServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DataServiceBuilder.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -998,7 +998,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DataServiceFactory.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DataServiceFactory.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -1020,7 +1020,7 @@ namespace CodeGenerator
         {
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ServiceBuilder.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -1044,7 +1044,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\GenServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\GenServiceBuilder.cs");
 
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
@@ -1075,7 +1075,7 @@ namespace CodeGenerator
                         continue;
 
                     string objectName = item.Name.Substring(0, item.Name.Length - 4);
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}.cs", objectName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}.cs", objectName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -1107,7 +1107,7 @@ namespace CodeGenerator
                         continue;
 
                     string objectName = item.Name.Substring(0, item.Name.Length - 4);
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}Collection.cs", objectName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}Collection.cs", objectName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -1139,7 +1139,7 @@ namespace CodeGenerator
                         continue;
 
                     string objectName = "Biz" + item.Name.Substring(0, item.Name.Length - 4);
-                    string strPath = string.Format(@"F:\Tools\Creator\Gen{0}.cs", objectName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\Gen{0}.cs", objectName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -1171,7 +1171,7 @@ namespace CodeGenerator
                         continue;
 
                     string objectName = "Biz" + item.Name.Substring(0, item.Name.Length - 4);
-                    string strPath = string.Format(@"F:\Tools\Creator\Gen{0}Collection.cs", objectName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\Gen{0}Collection.cs", objectName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -1238,7 +1238,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}_Asp.ent.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}_Asp.ent.cs", entityName);
 
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
@@ -1266,7 +1266,7 @@ namespace CodeGenerator
             {
                 ViewObjOverrideCode factory = new ViewObjOverrideCode(assembly, this.textBox1.Text);
 
-                string strPath = string.Format(@"F:\Tools\Creator\ViewOverrideProperties.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ViewOverrideProperties.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1298,7 +1298,7 @@ namespace CodeGenerator
                     string entityName = item.Name.Substring(0, item.Name.Length - 4);
 
                     //View
-                    string strPath = string.Format(@"F:\Tools\Creator\{0}View.cs", entityName);
+                    string strPath = string.Format(@"E:\Temp\Documents\Create\{0}View.cs", entityName);
                     FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
                     using (StreamWriter writer = new StreamWriter(fs))
@@ -1308,7 +1308,7 @@ namespace CodeGenerator
                     }
 
                     //ViewCollection
-                    strPath = string.Format(@"F:\Tools\Creator\{0}ViewCollection.cs", entityName);
+                    strPath = string.Format(@"E:\Temp\Documents\Create\{0}ViewCollection.cs", entityName);
                     fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
                     using (StreamWriter writer = new StreamWriter(fs))
@@ -1332,7 +1332,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DataSchema.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DataSchema.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1355,7 +1355,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\BizSchema.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\BizSchema.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1378,7 +1378,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ViewSchema.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ViewSchema.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1401,7 +1401,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DBSchema.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DBSchema.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1424,7 +1424,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DataServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DataServiceBuilder.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1447,7 +1447,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DataServiceHelper.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DataServiceHelper.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1470,7 +1470,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\DataServiceExHelper.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\DataServiceExHelper.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1493,7 +1493,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\FacadeMethods.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\FacadeMethods.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1517,7 +1517,7 @@ namespace CodeGenerator
             try
             {
                 //Service Builder
-                string strPath = string.Format(@"F:\Tools\Creator\ServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ServiceBuilder.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1535,7 +1535,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(1, item.Name.Length - 8);
 
-                    strPath = string.Format(@"F:\Tools\Creator\{0}Wrapper.cs", entityName);
+                    strPath = string.Format(@"E:\Temp\Documents\Create\{0}Wrapper.cs", entityName);
                     fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
                     using (StreamWriter writer = new StreamWriter(fs))
@@ -1560,7 +1560,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\MicroServiceWrapper.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\MicroServiceWrapper.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1584,7 +1584,7 @@ namespace CodeGenerator
             try
             {
                 //Service Builder
-                string strPath = string.Format(@"F:\Tools\Creator\ServiceBuilder.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ServiceBuilder.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1602,7 +1602,7 @@ namespace CodeGenerator
 
                     string entityName = item.Name.Substring(1, item.Name.Length - 8);
 
-                    strPath = string.Format(@"F:\Tools\Creator\{0}Wrapper.cs", entityName);
+                    strPath = string.Format(@"E:\Temp\Documents\Create\{0}Wrapper.cs", entityName);
                     fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                     fs.SetLength(0);
                     using (StreamWriter writer = new StreamWriter(fs))
@@ -1632,7 +1632,7 @@ namespace CodeGenerator
                     return;
 
                 //Interface
-                string strPath = string.Format(@"F:\Tools\Creator\IBiz{0}.cs", splits[1].Substring(1));
+                string strPath = string.Format(@"E:\Temp\Documents\Create\IBiz{0}.cs", splits[1].Substring(1));
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1642,12 +1642,40 @@ namespace CodeGenerator
                 }
 
                 //Impl
-                strPath = string.Format(@"F:\Tools\Creator\Biz{0}.cs", splits[1].Substring(1));
+                strPath = string.Format(@"E:\Temp\Documents\Create\Biz{0}.cs", splits[1].Substring(1));
                 fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
                 {
                     FacadeBizServiceCode code = new FacadeBizServiceCode(assembly);
+                    writer.Write(code.GenCode());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void btnBizService_Click(object sender, EventArgs e)
+        {
+            Assembly assembly = this.GetAssembly(string.Empty);
+            if (assembly == null)
+                return;
+
+            try
+            {
+                string[] splits = assembly.GetName().Name.Split('.');
+                if (splits.Length < 2)
+                    return;
+
+                string className = splits[1];
+                string strPath = string.Format(@"E:\Temp\Documents\Create\Biz{0}.cs", className);
+                FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                fs.SetLength(0);
+                using (StreamWriter writer = new StreamWriter(fs))
+                {
+                    BizServiceCode code = new BizServiceCode(assembly, className, this.ProjectName);
                     writer.Write(code.GenCode());
                 }
             }
@@ -1670,7 +1698,7 @@ namespace CodeGenerator
                     return;
 
                 //Interface
-                string strPath = string.Format(@"F:\Tools\Creator\IBizPanelService.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\IBizPanelService.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1680,7 +1708,7 @@ namespace CodeGenerator
                 }
 
                 //Impl
-                strPath = string.Format(@"F:\Tools\Creator\BizPanelService.cs");
+                strPath = string.Format(@"E:\Temp\Documents\Create\BizPanelService.cs");
                 fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1703,7 +1731,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\GetViewBy.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\GetViewBy.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1726,7 +1754,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\Interface.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\Interface.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1749,7 +1777,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\CRUD.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\CRUD.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -1990,7 +2018,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ViewObjs.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ViewObjs.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
@@ -2013,7 +2041,7 @@ namespace CodeGenerator
 
             try
             {
-                string strPath = string.Format(@"F:\Tools\Creator\ViewMethods.cs");
+                string strPath = string.Format(@"E:\Temp\Documents\Create\ViewMethods.cs");
                 FileStream fs = new FileStream(strPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fs.SetLength(0);
                 using (StreamWriter writer = new StreamWriter(fs))
