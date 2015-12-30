@@ -50,7 +50,7 @@ namespace CodeGenerator
             Type[] types = this._assembly.GetTypes();
             foreach (Type item in types)
             {
-                if (!item.IsPublic || item.IsAbstract || !item.Name.StartsWith("Biz"))
+                if (!item.IsPublic)
                     continue;
 
                 this.WriteMethods(item, writer);
