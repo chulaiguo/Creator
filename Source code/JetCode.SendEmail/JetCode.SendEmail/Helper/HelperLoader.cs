@@ -115,11 +115,12 @@ namespace JetCode.SendEmail.Helper
                 {
                     //string sitecode = row[5].ToString();
                     //string embossed = row[6].ToString();
+                    //string expiryDate = row[8].ToString();
                     //string buildingID = row[9].ToString();
-                    //if (string.IsNullOrEmpty(sitecode))
+                    //if (string.IsNullOrEmpty(sitecode) || string.IsNullOrEmpty(expiryDate) || string.IsNullOrEmpty(buildingID))
                     //    continue;
 
-                    //string key = string.Format("{0}_{1}_{2}", sitecode, embossed, buildingID);
+                    //string key = string.Format("{0}_{1}_{2}_{3}", sitecode, embossed, expiryDate, buildingID);
                     //if (!retList.ContainsKey(key))
                     //{
                     //    retList.Add(key, key);
