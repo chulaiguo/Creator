@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
-using Cheke;
-using D3000.FacadeServiceWrapper;
 
 namespace JetCode.SendEmail.Helper
 {
@@ -78,13 +76,8 @@ namespace JetCode.SendEmail.Helper
         {
             try
             {
-                //HelperExcel excel = new HelperExcel();
-                //DataSet dataSet = excel.LoadIntoDataSet(fileName, false);
-
-                byte[] data = File.ReadAllBytes(fileName);
-                DataSet dataSet = BizExcelWrapper.LoadIntoDataSet(data, false, new SecurityToken("", ""));
-                if (dataSet.Tables.Count == 0)
-                    return null;
+                HelperExcel excel = new HelperExcel();
+                DataSet dataSet = excel.LoadIntoDataSet(fileName, true);
 
                 return dataSet;
             }
@@ -122,14 +115,14 @@ namespace JetCode.SendEmail.Helper
                 {
                     //string sitecode = row[5].ToString();
                     //string embossed = row[6].ToString();
-                    //string photo = row[15].ToString();
-                    //if (string.IsNullOrEmpty(photo))
+                    //string buildingID = row[9].ToString();
+                    //if (string.IsNullOrEmpty(sitecode))
                     //    continue;
 
-                    //string key = string.Format("{0}_{1}", sitecode, embossed);
+                    //string key = string.Format("{0}_{1}_{2}", sitecode, embossed, buildingID);
                     //if (!retList.ContainsKey(key))
                     //{
-                    //    retList.Add(key, photo);
+                    //    retList.Add(key, key);
                     //}
                     string emails = row[i].ToString();
                     emails = emails.Trim().Trim('\"');

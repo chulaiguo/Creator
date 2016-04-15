@@ -79,8 +79,8 @@ namespace JetCode.SendEmail
                 if (this._sentEmailList.ContainsKey(pair.Key))
                     continue;
 
-                builder.AppendLine(string.Format("{0};", pair.Value));
-                //builder.AppendLine(string.Format("{0}|{1}", pair.Key, pair.Value));
+                //builder.AppendLine(string.Format("{0};", pair.Value));
+                builder.AppendLine(string.Format("{0}|{1}", pair.Key, pair.Value));
             }
             string text = builder.ToString();
             if (text.Length > 0)

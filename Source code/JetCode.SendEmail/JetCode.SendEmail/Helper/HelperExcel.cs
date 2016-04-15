@@ -127,7 +127,7 @@ namespace JetCode.SendEmail.Helper
         private string GetConnectionString(string path, bool header)
         {
             string str = header ? "Yes" : "No";
-            return string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR={1};IMEX=1;\"", path, str);
+            return string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0;HDR={1};IMEX=1;\"", path, str);
         }
     }
 }
