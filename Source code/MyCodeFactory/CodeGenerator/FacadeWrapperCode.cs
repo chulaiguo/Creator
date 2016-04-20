@@ -92,18 +92,6 @@ namespace CodeGenerator
             }
         }
 
-        private void WriteProcessInParas(MethodInfo info, StringWriter writer)
-        {
-            ParameterInfo[] paras = info.GetParameters();
-            foreach (ParameterInfo para in paras)
-            {
-                if (para.ParameterType != typeof(DateTime))
-                    continue;
-
-                writer.WriteLine("\t\t\t{0} = {0}.ToUniversalTime();", para.Name);
-            }
-        }
-
         private void WriteFacadeMethods(Type type, StringWriter writer)
         {
             MethodInfo[] methods = type.GetMethods();
@@ -114,8 +102,6 @@ namespace CodeGenerator
                     string nameWithoutData = info.ReturnType.Name.Substring(0, info.ReturnType.Name.Length - 4);
                     writer.WriteLine("\t\tpublic static {0} {1}({2})", nameWithoutData, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
-
-                    this.WriteProcessInParas(info, writer);
 
                     writer.WriteLine("\t\t\t{3} data = FacadeServiceBuilder.{0}.{1}({2});", type.Name.Substring(1), info.Name, this.GetParaNameList(info), info.ReturnType);
                     writer.WriteLine("\t\t\tif (data == null)");
@@ -131,8 +117,6 @@ namespace CodeGenerator
                     writer.WriteLine("\t\tpublic static {0}Collection {1}({2})", nameWithoutData, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
 
-                    this.WriteProcessInParas(info, writer);
-
                     writer.WriteLine("\t\t\t{3}Collection list = new {3}Collection(FacadeServiceBuilder.{0}.{1}({2}));", type.Name.Substring(1), info.Name, this.GetParaNameList(info), nameWithoutData);
                     writer.WriteLine("\t\t\tIdentity.ResetQueryParas();");
                     writer.WriteLine("\t\t\treturn list;");
@@ -143,8 +127,6 @@ namespace CodeGenerator
                     writer.WriteLine("\t\tpublic static {0} {1}({2})", info.ReturnType, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
 
-                    this.WriteProcessInParas(info, writer);
-
                     writer.WriteLine("\t\t\tFacadeServiceBuilder.{0}.{1}({2});", type.Name.Substring(1), info.Name, this.GetParaNameList(info));
                     writer.WriteLine("\t\t}");
                 }
@@ -153,11 +135,7 @@ namespace CodeGenerator
                     writer.WriteLine("\t\tpublic static {0} {1}({2})", info.ReturnType, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
 
-                    this.WriteProcessInParas(info, writer);
-
-                    writer.WriteLine("\t\t\tDateTime ret_utc = FacadeServiceBuilder.{0}.{1}({2});", type.Name.Substring(1), info.Name, this.GetParaNameList(info));
-                    writer.WriteLine("\t\t\tret_utc = new DateTime(ret_utc.Ticks, DateTimeKind.Utc);");
-                    writer.WriteLine("\t\t\treturn ret_utc.ToLocalTime();");
+                    writer.WriteLine("\t\t\treturn FacadeServiceBuilder.{0}.{1}({2});", type.Name.Substring(1), info.Name, this.GetParaNameList(info));
                     writer.WriteLine("\t\t}");
                 }
                 else
@@ -201,8 +179,6 @@ namespace CodeGenerator
                     {
                         writer.WriteLine("\t\tpublic static {0} {1}({2})", info.ReturnType, info.Name, this.GetParas(info));
                         writer.WriteLine("\t\t{");
-
-                        this.WriteProcessInParas(info, writer);
 
                         writer.WriteLine("\t\t\treturn FacadeServiceBuilder.{0}.{1}({2});", type.Name.Substring(1),
                                          info.Name, this.GetParaNameList(info));

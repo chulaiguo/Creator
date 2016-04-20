@@ -74,23 +74,13 @@ namespace CodeGenerator
                     writer.WriteLine("\t\tpublic {0} {1}({2})", info.ReturnType, info.Name, this.GetParas(info));
                     writer.WriteLine("\t\t{");
 
-                    ParameterInfo[] paras = info.GetParameters();
-                    foreach (ParameterInfo para in paras)
-                    {
-                        if(para.ParameterType != typeof(DateTime))
-                            continue;
-
-                        writer.WriteLine("\t\t\tDateTime {0}_utc = new DateTime({0}.Ticks, DateTimeKind.Utc);", para.Name);
-                        writer.WriteLine("\t\t\t{0} = {0}_utc.ToLocalTime();", para.Name);
-                    }
-
                     if (info.ReturnType == typeof(void))
                     {
                         writer.WriteLine("\t\t\t{0}.{1}({2});", wrapperName, info.Name, this.GetParaNameList(info));
                     }
                     else if (info.ReturnType == typeof(DateTime))
                     {
-                        writer.WriteLine("\t\t\treturn {0}.{1}({2}).ToUniversalTime();", wrapperName, info.Name, this.GetParaNameList(info));
+                        writer.WriteLine("\t\t\treturn {0}.{1}({2});", wrapperName, info.Name, this.GetParaNameList(info));
                     }
                     else
                     {

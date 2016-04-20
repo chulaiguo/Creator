@@ -72,32 +72,6 @@ namespace CodeGenerator
                     writer.WriteLine("\t\tpublic static {0} {1}({2})", info.ReturnType, methodName, this.GetParas(info));
                     writer.WriteLine("\t\t{");
 
-                    //ParameterInfo[] paras = info.GetParameters();
-                    //foreach (ParameterInfo para in paras)
-                    //{
-                    //    if(para.ParameterType != typeof(DateTime))
-                    //        continue;
-
-                    //    writer.WriteLine("\t\t\tDateTime {0}_utc = new DateTime({0}.Ticks, DateTimeKind.Utc);", para.Name);
-                    //    writer.WriteLine("\t\t\t{0} = {0}_utc.ToLocalTime();", para.Name);
-                    //}
-
-                    //if(info.ReturnType.IsValueType)
-                    //{
-                    //    if (info.ReturnType == typeof(bool))
-                    //    {
-                    //        writer.WriteLine("\t\t\treturn false;");
-                    //    }
-                    //    else
-                    //    {
-                    //        writer.WriteLine("\t\t\treturn 0;");
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    writer.WriteLine("\t\t\treturn null;");
-                    //}
-
                     writer.WriteLine("\t\t\treturn E150.ViewObj.{0}.{1}({2});", objectName, info.Name, this.GetParaNameList(info));
                     writer.WriteLine("\t\t}");
                     writer.WriteLine();
